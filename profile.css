@@ -1,0 +1,160 @@
+
+
+.user-orders {
+    padding: 20px;
+    background-color: #f8f8f8;
+    flex: 1;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+  
+.orders-table th, .orders-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+  
+.orders-table th {
+    background-color: #f8f8f8;
+}
+
+.action-btn {
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+  
+.action-btn:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+  
+.modal {
+    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-content {
+    background-color: white;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+  
+.modal-name {
+  border: 1px solid #ccc;
+}
+
+.modal h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.close-btn {
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+} 
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 5px;
+    margin-bottom: 20px;
+}
+  
+.modal-content button:hover {
+    opacity: 0.9;
+    background-color: #d6d6d6;
+}
+  
+.delete-confirm {
+    background-color: #d9534f; /* Красный для подтверждения удаления */
+    color: white;
+}
+  
+.delete-confirm:hover {
+    background-color: #c9302c;
+}
+  
+.delete-cancel {
+    background-color: #f8f8f8; /* Серый для отмены */
+    color: #333;
+    border: 1px solid #ccc;
+}
+  
+.delete-cancel:hover {
+    background-color: #e6e6e6;
+}
+  
+.modal-content .save-btn {
+    background-color: #5cb85c; /* Зеленый для сохранения изменений */
+    color: white;
+}
+  
+.modal-content .save-btn:hover {
+    background-color: #4cae4c;
+}
+
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px 20px; 
+    text-align: left;
+    font-size: 16px;
+    margin: 20px;
+}
+  
+.modal-row {
+    display: contents; 
+}
+  
+.modal-label {
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right; 
+}
+  
+.modal-value {
+    font-family: 'Jura', sans-serif;
+    text-align: left; 
+    color: #333;
+}
+
+
+.edit-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px; 
+    text-align: left;
+    font-size: 16px;
+    margin: 20px;
+} 
+  
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}

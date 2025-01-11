@@ -172,7 +172,7 @@ h3 {
     margin: 0px;
 }
   
-input, label, option {
+input, label, option, select, span, textarea {
     font-family: 'Jura', sans-serif;
     font-size: 16px;
     color: #363636;
@@ -289,6 +289,18 @@ a {
     background-color: #0056b3;
 }
   
+.delete-btn {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+  
+.delete-btn:hover {
+    background-color: #d10101;
+}
   
 .load-more-container {
     display: flex;
