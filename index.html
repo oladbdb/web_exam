@@ -1,133 +1,114 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Marketplacet</title>
-    <meta name="description" content="Веб-технологии Байкова Мария 231-3212" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Marketplacet</title>
+        <meta name="description" content="Веб-технологии Байкова Мария 231-3212" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"><h1>Marketplace</h1></a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Поиск товаров..." />
-        <button type="submit">Найти</button>
-      </div>
-      <nav class="user-links">
-        <a href="cart.html" class="cart-icon" aria-label="Корзина">🛒</a>
-        <a href="profile.html" class="profile-icon" aria-label="Личный кабинет">👤</a>
-      </nav>
-    </header>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><h1>Marketplace</h1></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск товаров..." />
+                <button type="submit">Найти</button>
+            </div>
+            <nav class="user-links">
+                <a href="cart.html" class="cart-icon" aria-label="Корзина">🛒</a>
+                <a href="profile.html" class="profile-icon" aria-label="Личный кабинет">👤</a>
+            </nav>
+        </header>
 
-    <main>
-      <div class="notification" id="notification">
-        <span class="notification-text">Это ваше уведомление!</span>
-        <button class="close-btn" aria-label="Закрыть уведомление" onclick="closeNotification()">×</button>
-      </div>
+        <main>
+            <div class="notification" id="notification">
+                <span class="notification-text">Это ваше уведомление!</span>
+                <button class="close-btn" aria-label="Закрыть уведомление" onclick="closeNotification()">×</button>
+            </div>
       
-      <section class="main-section">
-        <aside class="sidebar">
-          <form class="filter-form">
-            <h2>Фильтры</h2>
-            <div class="filter-section">
-              <h3>Категория товара</h3>
-              <label>
-                <input type="checkbox" name="category" value="electronics" />
-                Электроника
-              </label>
-              <label>
-                <input type="checkbox" name="category" value="clothing" />
-                Одежда
-              </label>
-              <label>
-                <input type="checkbox" name="category" value="books" />
-                Книги
-              </label>
-            </div>
+            <section class="main-section">
+                <aside class="sidebar">
+                    <form class="filter-form">
+                        <h2>Фильтры</h2>
+                        <div class="filter-section">
+                            <h3>Категория товара</h3>
+                            <label>
+                                <input type="checkbox" name="category" value="electronics" />
+                                Электроника
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="clothing" />
+                                Одежда
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="books" />
+                                Книги
+                            </label>
+                        </div>
           
-            <h3>Стоимость</h3>
-            <div class="price-range">
-              <label>
-                От: <input type="number" name="price-min" placeholder="0" />
-              </label>
-              <label>
-                До: <input type="number" name="price-max" placeholder="10000" />
-              </label>
-            </div>
+                        <h3>Стоимость</h3>
+                        <div class="price-range">
+                            <label>
+                                От: <input type="number" name="price-min" placeholder="0" />
+                            </label>
+                            <label>
+                                До: <input type="number" name="price-max" placeholder="10000" />
+                            </label>
+                        </div>
           
-            <div class="filter-section">
-              <h3>Товары со скидкой</h3>
-              <label>
-                <input type="checkbox" name="discount" />
-                Только со скидкой
-              </label>
-            </div>
+                        <div class="filter-section">
+                            <h3>Товары со скидкой</h3>
+                            <label>
+                                <input type="checkbox" name="discount" />
+                                Только со скидкой
+                            </label>
+                        </div>
           
-            <button type="submit" class="apply-btn">Применить</button>
-          </form>
-        </aside>
+                        <button type="submit" class="apply-btn">Применить</button>
+                    </form>
+                </aside>
 
-        <section class="product-catalog">
-          <div class="catalog-header">
-            <h2>Каталог</h2>
-            <select class="sort-select" name="sort">
-              <option value="default">По умолчанию</option>
-              <option value="price-asc">Цена: по возрастанию</option>
-              <option value="price-desc">Цена: по убыванию</option>
-              <option value="popular">Популярные</option>
-              <option value="new">Новинки</option>
-            </select>
-          </div>
-          <div class="product-list">
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="add-to-cart-btn">Добавить в корзину</button>
+                <section class="product-catalog">
+                    <div class="catalog-header">
+                        <h2>Каталог</h2>
+                        <select class="sort-select" name="sort">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Цена: по возрастанию</option>
+                            <option value="price-desc">Цена: по убыванию</option>
+                            <option value="popular">Популярные</option>
+                            <option value="new">Новинки</option>
+                        </select>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-card">
+                            <img src="product-image.jpg" alt="Название товара" class="product-image" />
+                            <h3 class="product-title">Название товара</h3>
+                            <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
+                            <div class="product-price">
+                                <span class="price-current">₽1200</span>
+                                <span class="price-old">₽1500</span>
+                            </div>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="load-more-container">
+                        <button class="load-more-btn">Загрузить ещё</button>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Marketplace</p>
+                <p>Контакты: <a href="tel:+79000000000">+7 (900) 000-00-00</a> <a href="mailto:info@marketplace.com">info@marketplace.com</a></p>
             </div>
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="add-to-cart-btn">Добавить в корзину</button>
-            </div>
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="add-to-cart-btn">Добавить в корзину</button>
-            </div>
-          </div>
-          <div class="load-more-container">
-            <button class="load-more-btn">Загрузить ещё</button>
-          </div>
-        </section>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>© 2025 Marketplace</p>
-        <p>Контакты: <a href="tel:+79000000000">+7 (900) 000-00-00</a> <a href="mailto:info@marketplace.com">info@marketplace.com</a></p>
-      </div>
-    </footer>
-  </body>
+        </footer>
+        <script src="scripts/api.js"></script>
+    </body>
 </html>
