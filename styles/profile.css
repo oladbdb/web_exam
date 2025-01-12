@@ -87,7 +87,7 @@
 }
   
 .delete-confirm {
-    background-color: #d9534f; /* Красный для подтверждения удаления */
+    background-color: #d9534f; 
     color: white;
 }
   
@@ -96,7 +96,7 @@
 }
   
 .delete-cancel {
-    background-color: #f8f8f8; /* Серый для отмены */
+    background-color: #f8f8f8; 
     color: #333;
     border: 1px solid #ccc;
 }
@@ -106,7 +106,7 @@
 }
   
 .modal-content .save-btn {
-    background-color: #5cb85c; /* Зеленый для сохранения изменений */
+    background-color: #5cb85c; 
     color: white;
 }
   

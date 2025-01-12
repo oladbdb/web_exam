@@ -95,5 +95,26 @@ async function getCartProducts() {
     return products;
 }
 
+async function createOrder(orderData) {
+    try {
+        const response = await fetch(`${API_URL}/orders?api_key=${API_KEY}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Ошибка при создании заказа');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Ошибка:', error);
+        throw error;
+    }
+}
+
 
 
