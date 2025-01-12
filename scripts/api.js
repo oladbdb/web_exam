@@ -9,12 +9,17 @@ let totalProducts = 0;
 let currentSortType = 'default';
 
 document.addEventListener('DOMContentLoaded', () => {
-    cardTemplate = document.querySelector('.product-card').cloneNode(true);
+    const productCard = document.querySelector('.product-card');
+    if (productCard) {
+        cardTemplate = productCard.cloneNode(true);
+    }
     
     const sortSelect = document.querySelector('.sort-select');
-    sortSelect.addEventListener('change', (event) => {
-        sortProducts(event.target.value);
-    });
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (event) => {
+            sortProducts(event.target.value);
+        });
+    }
 }); 
 
 function displayProducts(replace = true) {
@@ -47,7 +52,48 @@ function displayProductCard(card, product) {
         currentPrice.textContent = `₽${product.actual_price}`;
         oldPrice.style.display = 'none';
     }
+
+    const addToCartBtn = card.querySelector('.add-to-cart-btn');
+    addToCartBtn.onclick = () => addToCart(product.id);
 } 
+
+async function getProductById(productId) {
+    try {
+        const response = await fetch(`${API_URL}/goods/${productId}?api_key=${API_KEY}`);
+        if (!response.ok) {
+            throw new Error('Не удалось получить данные о товаре');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Ошибка при получении данных о товаре:', error);
+        return null;
+    }
+}
+
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (!cart.includes(productId)) {
+        cart.push(productId);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        showNotification('Товар добавлен в корзину');
+    } else {
+        showNotification('Товар уже в корзине', true);
+    }
+}
+
+async function getCartProducts() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const products = [];
+    
+    for (const productId of cart) {
+        const product = await getProductById(productId);
+        if (product) {
+            products.push(product);
+        }
+    }
+    
+    return products;
+}
 
 
 

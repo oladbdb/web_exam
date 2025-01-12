@@ -1,4 +1,5 @@
 .cart-empty {
+    display: none;
     font-size: 18px;
     color: #363636;
 }

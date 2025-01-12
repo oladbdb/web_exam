@@ -39,16 +39,20 @@
                         <div class="filter-section">
                             <h3>Категория товара</h3>
                             <label>
-                                <input type="checkbox" name="category" value="electronics" />
-                                Электроника
+                                <input type="checkbox" name="category" value="beauty & health" />
+                                Красота и здоровье
                             </label>
                             <label>
-                                <input type="checkbox" name="category" value="clothing" />
-                                Одежда
+                                <input type="checkbox" name="category" value="home & kitchen" />
+                                Дом и кухня
                             </label>
                             <label>
-                                <input type="checkbox" name="category" value="books" />
-                                Книги
+                                <input type="checkbox" name="category" value="sports & fitness" />
+                                Спорт и фитнес
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="tv, audio & cameras" />
+                                ТВ, аудио и камеры
                             </label>
                         </div>
           
@@ -63,10 +67,14 @@
                         </div>
           
                         <div class="filter-section">
-                            <h3>Товары со скидкой</h3>
+                            <h3>Скидки</h3>
                             <label>
-                                <input type="checkbox" name="discount" />
-                                Только со скидкой
+                                <input type="checkbox" name="discount" value="with-discount" />
+                                Товары со скидкой
+                            </label>
+                            <label>
+                                <input type="checkbox" name="discount" value="without-discount" />
+                                Товары без скидки
                             </label>
                         </div>
           
@@ -79,10 +87,10 @@
                         <h2>Каталог</h2>
                         <select class="sort-select" name="sort">
                             <option value="default">По умолчанию</option>
+                            <option value="rating-asc">Рейтинг: по возрастанию</option>
+                            <option value="rating-desc">Рейтинг: по убыванию</option>
                             <option value="price-asc">Цена: по возрастанию</option>
                             <option value="price-desc">Цена: по убыванию</option>
-                            <option value="popular">Популярные</option>
-                            <option value="new">Новинки</option>
                         </select>
                     </div>
                     <div class="product-list">
@@ -111,5 +119,6 @@
         </footer>
         <script src="scripts/api.js"></script>
         <script src="scripts/filters.js"></script>
+        <script src="scripts/notifications.js"></script>
     </body>
 </html>
