@@ -1,153 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Marketplace</title>
-    <meta name="description" content="Веб-технологии Байкова Мария 231-3212" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="cart.css" />
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Marketplace</title>
+        <meta name="description" content="Веб-технологии Байкова Мария 231-3212" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="cart.css" />
+    </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"><h1>Marketplace</h1></a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Поиск товаров..." />
-        <button type="submit">Найти</button>
-      </div>
-      <nav class="user-links">
-        <a href="cart.html" class="cart-icon" aria-label="Корзина">🛒</a>
-        <a href="profile.html" class="profile-icon" aria-label="Личный кабинет">👤</a>
-      </nav>
-    </header>
-
-    <main>
-      <div class="notification" id="notification">
-        <span class="notification-text">Это ваше уведомление!</span>
-        <button class="close-btn" aria-label="Закрыть уведомление" onclick="closeNotification()">×</button>
-      </div>
-
-      <section class="main-section">
-        <section class="product-catalog">
-          <div class="catalog-header">
-            <h2>Корзина</h2>
-          </div>
-
-          <div class="cart-empty">
-            <p>Корзина пуста. Перейдите в <a href="index.html">каталог</a>, чтобы добавить товары.</p>
-          </div>
-
-          <div class="product-list">
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="delete-btn">Удалить</button>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><h1>Marketplace</h1></a>
             </div>
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="delete-btn">Удалить</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск товаров..." />
+                <button type="submit">Найти</button>
             </div>
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="delete-btn">Удалить</button>
-            </div>
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="delete-btn">Удалить</button>
-            </div>
-            <div class="product-card">
-              <img src="product-image.jpg" alt="Название товара" class="product-image" />
-              <h3 class="product-title">Название товара</h3>
-              <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
-              <div class="product-price">
-                <span class="price-current">₽1200</span>
-                <span class="price-old">₽1500</span>
-              </div>
-              <button class="delete-btn">Удалить</button>
-            </div>
-          </div>
-        </section>
+            <nav class="user-links">
+                <a href="cart.html" class="cart-icon" aria-label="Корзина">🛒</a>
+                <a href="profile.html" class="profile-icon" aria-label="Личный кабинет">👤</a>
+            </nav>
+        </header>
 
-        <section class="checkout">
-          <h2>Оформление заказа</h2>
-          <form class="checkout-form">
+        <main>
+            <div class="notification" id="notification">
+                <span class="notification-text">Это ваше уведомление!</span>
+                <button class="close-btn" aria-label="Закрыть уведомление" onclick="closeNotification()">×</button>
+            </div>
 
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required />
+            <section class="main-section">
+                <section class="product-catalog">
+                    <div class="catalog-header">
+                        <h2>Корзина</h2>
+                    </div>
+
+                    <div class="cart-empty">
+                        <p>Корзина пуста. Перейдите в <a href="index.html">каталог</a>, чтобы добавить товары.</p>
+                    </div>
+
+                    <div class="product-list">
+                        <div class="product-card">
+                            <img src="product-image.jpg" alt="Название товара" class="product-image" />
+                            <h3 class="product-title">Название товара</h3>
+                            <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
+                            <div class="product-price">
+                                <span class="price-current">₽1200</span>
+                                <span class="price-old">₽1500</span>
+                            </div>
+                            <button class="delete-btn">Удалить</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="product-image.jpg" alt="Название товара" class="product-image" />
+                            <h3 class="product-title">Название товара</h3>
+                            <div class="product-rating">⭐️⭐️⭐️⭐️⭐️</div>
+                            <div class="product-price">
+                                <span class="price-current">₽1200</span>
+                                <span class="price-old">₽1500</span>
+                            </div>
+                            <button class="delete-btn">Удалить</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="checkout">
+                    <h2>Оформление заказа</h2>
+                    <form class="checkout-form">
+
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required />
         
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Введите ваш email" required />
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Введите ваш email" required />
         
-            <label for="phone">Телефон:</label>
-            <input type="text" id="phone" name="phone" placeholder="Введите ваш телефон" required />
+                        <label for="phone">Телефон:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Введите ваш телефон" required />
+                    
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter" />
+                            Согласен на получение рассылки
+                        </label>
         
-            <label class="checkbox-label">
-              <input type="checkbox" id="newsletter" name="newsletter" />
-              Согласен на получение рассылки
-            </label>
+                        <label for="address">Адрес доставки:</label>
+                        <input type="text" id="address" name="address" placeholder="Введите адрес доставки" required />
         
-            <label for="address">Адрес доставки:</label>
-            <input type="text" id="address" name="address" placeholder="Введите адрес доставки" required />
+                        <label for="delivery-date">Дата доставки:</label>
+                        <input type="date" id="delivery-date" name="delivery-date" required />
         
-            <label for="delivery-date">Дата доставки:</label>
-            <input type="date" id="delivery-date" name="delivery-date" required />
+                        <label for="delivery-time">Временной интервал доставки:</label>
+                        <select id="delivery-time" name="delivery-time" required>
+                            <option value="" disabled selected>Выберите интервал</option>
+                            <option value="morning">Утро (9:00 - 12:00)</option>
+                            <option value="afternoon">День (12:00 - 15:00)</option>
+                            <option value="evening">Вечер (15:00 - 18:00)</option>
+                        </select>
         
-            <label for="delivery-time">Временной интервал доставки:</label>
-            <select id="delivery-time" name="delivery-time" required>
-              <option value="" disabled selected>Выберите интервал</option>
-              <option value="morning">Утро (9:00 - 12:00)</option>
-              <option value="afternoon">День (12:00 - 15:00)</option>
-              <option value="evening">Вечер (15:00 - 18:00)</option>
-            </select>
-        
-            <label for="comment">Комментарий к заказу:</label>
-            <textarea id="comment" name="comment" rows="4" placeholder="Введите ваш комментарий"></textarea>
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment" name="comment" rows="4" placeholder="Введите ваш комментарий"></textarea>
             
-            <div class="order-summary">
-              <p>Итоговая стоимость заказа: <span class="total-price">₽0</span></p>
+                        <div class="order-summary">
+                            <p>Итоговая стоимость заказа: <span class="total-price">₽0</span></p>
+                        </div>
+
+                        <button type="submit" class="checkout-btn">Оформить заказ</button>
+                    </form>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Marketplace</p>
+                <p>Контакты: <a href="tel:+79000000000">+7 (900) 000-00-00</a> <a href="mailto:info@marketplace.com">info@marketplace.com</a></p>
             </div>
-
-            <button type="submit" class="checkout-btn">Оформить заказ</button>
-          </form>
-        </section>
-        
-
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>© 2025 Marketplace</p>
-        <p>Контакты: <a href="tel:+79000000000">+7 (900) 000-00-00</a> <a href="mailto:info@marketplace.com">info@marketplace.com</a></p>
-      </div>
-    </footer>
-  </body>
+        </footer>
+    </body>
 </html>
