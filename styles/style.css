@@ -174,7 +174,7 @@ h3 {
     margin: 0px;
 }
   
-input, label, option, select, span, textarea {
+input, label, option, select, span, textarea, th, td {
     font-family: 'Jura', sans-serif;
     font-size: 16px;
     color: #363636;

@@ -49,98 +49,9 @@
                                 <th>Действия</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2025-01-10 12:45</td>
-                                <td>Товар1, Товар2, Товар3</td>
-                                <td>₽3500</td>
-                                <td>2025-01-12, Утро (9:00 - 12:00)</td>
-                                <td>
-                                    <button class="action-btn view-btn" data-order-id="1">👁️</button>
-                                    <button class="action-btn edit-btn" data-order-id="1">✏️</button>
-                                    <button class="action-btn dlt-btn" data-order-id="1">🗑️</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>2025-01-10 12:45</td>
-                                <td>Товар1, Товар2, Товар3</td>
-                                <td>₽3500</td>
-                                <td>2025-01-12, Утро (9:00 - 12:00)</td>
-                                <td>
-                                    <button class="action-btn view-btn" data-order-id="1">👁️</button>
-                                    <button class="action-btn edit-btn" data-order-id="1">✏️</button>
-                                    <button class="action-btn dlt-btn" data-order-id="1">🗑️</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>2025-01-10 12:45</td>
-                                <td>Товар1, Товар2, Товар3</td>
-                                <td>₽3500</td>
-                                <td>2025-01-12, Утро (9:00 - 12:00)</td>
-                                <td>
-                                    <button class="action-btn view-btn" data-order-id="1">👁️</button>
-                                    <button class="action-btn edit-btn" data-order-id="1">✏️</button>
-                                    <button class="action-btn dlt-btn" data-order-id="1">🗑️</button>
-                                </td>
-                            </tr>
+                        <tbody id="orders-table-body">
                         </tbody>
                     </table>
-
-
-                    <div class="modal" id="view-modal">
-                        <div class="modal-content">
-                            <div class="modal-name">
-                                <h2>Просмотр заказа</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <div class="modal-row">
-                                    <div class="modal-label">Дата оформления:</div>
-                                    <div class="modal-value" id="order-date">2025-01-10</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Имя:</div>
-                                    <div class="modal-value" id="customer-name">Иван Иванов</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Телефон:</div>
-                                    <div class="modal-value" id="customer-phone">+7 900 000-00-00</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Email:</div>
-                                    <div class="modal-value" id="customer-email">ivan@example.com</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Адрес доставки:</div>
-                                    <div class="modal-value" id="delivery-address">г. Москва, ул. Ленина, д. 10</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Дата доставки:</div>
-                                    <div class="modal-value" id="delivery-date">2025-01-12</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Время доставки:</div>
-                                    <div class="modal-value" id="delivery-time">Утро (9:00 - 12:00)</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Состав заказа:</div>
-                                    <div class="modal-value" id="order-items">Товар1, Товар2, Товар3</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Стоимость:</div>
-                                    <div class="modal-value" id="order-price">₽3500</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">Комментарий:</div>
-                                    <div class="modal-value" id="order-comment">Позвонить перед доставкой</div>
-                                </div> 
-                            </div>
-                            <button type="submit">Сохранить</button>
-                        </div>
-                    </div>
         
                     <!-- Модальное окно редактирования -->
                     <div class="modal" id="edit-modal">
@@ -235,19 +146,6 @@
                             <button type="submit">Отмена</button>
                         </div>
                     </div>
-        
-                    <!-- Модальное окно удаления -->
-                    <div class="modal" id="delete-modal">
-                        <div class="modal-content">
-                            <div class="modal-name">
-                                <h2>Удаление заказа</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <p>Вы уверены, что хотите удалить этот заказ?</p>
-                            <button class="delete-confirm">Да</button>
-                            <button class="delete-cancel">Нет</button>
-                        </div>
-                    </div>
                 </section>
 
             </section>
@@ -258,5 +156,8 @@
                 <p>Контакты: <a href="tel:+79000000000">+7 (900) 000-00-00</a> <a href="mailto:info@marketplace.com">info@marketplace.com</a></p>
             </div>
         </footer>
+        <script src="scripts/api.js"></script>
+        <script src="scripts/notifications.js"></script>
+        <script src="scripts/profile.js"></script>
     </body>
 </html>

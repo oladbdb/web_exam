@@ -116,5 +116,25 @@ async function createOrder(orderData) {
     }
 }
 
+async function getOrders() {
+    const response = await fetch(`${API_URL}/orders?api_key=${API_KEY}`);
+    if (!response.ok) throw new Error('Ошибка при получении заказов');
+    return await response.json();
+}
+
+async function deleteOrder(orderId) {
+    const response = await fetch(`${API_URL}/orders/${orderId}?api_key=${API_KEY}`, {
+        method: 'DELETE'
+    });
+    if (!response.ok) throw new Error('Ошибка при удалении заказа');
+    return await response.json();
+}
+
+async function getOrderById(orderId) {
+    const response = await fetch(`${API_URL}/orders/${orderId}?api_key=${API_KEY}`);
+    if (!response.ok) throw new Error('Ошибка при получении заказа');
+    return await response.json();
+}
+
 
 
