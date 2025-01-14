@@ -1,3 +1,18 @@
+
+@media (max-width: 840px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .main-section {
+        align-items: center;
+    }
+
+}
+
 .cart-empty {
     display: none;
     font-size: 18px;
