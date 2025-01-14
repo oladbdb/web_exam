@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="styles/style.css" />
         <link rel="stylesheet" href="styles/profile.css" />
     </head>
-
     <body>
         <header>
             <div class="logo">
@@ -26,13 +25,11 @@
                 <a href="profile.html" class="profile-icon" aria-label="Личный кабинет">👤</a>
             </nav>
         </header>
-
         <main>
             <div class="notification" id="notification">
                 <span class="notification-text">Это ваше уведомление!</span>
                 <button class="close-btn" aria-label="Закрыть уведомление" onclick="closeNotification()">×</button>
             </div>
-
             <section class="main-section">
                 <section class="user-orders">
                     <div class="catalog-header">
@@ -52,102 +49,7 @@
                         <tbody id="orders-table-body">
                         </tbody>
                     </table>
-        
-                    <!-- Модальное окно редактирования -->
-                    <div class="modal" id="edit-modal">
-                        <div class="modal-content">
-                            <div class="modal-name">
-                                <h2>Редактирование заказа</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <form class="edit-form">
-                                <div class="modal-row">
-                                    <div class="modal-label">Дата оформления:</div>
-                                    <div class="modal-value" id="order-date">2025-01-10</div>
-                                </div>
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-name">Имя:</label>
-                                    </div>
-                                    <div class="modal-value" id="customer-name">
-                                        <input type="text" id="edit-name" name="name" value="Иван Иванов" />
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-phone">Телефон:</label>
-                                    </div>
-                                    <div class="modal-value" id="customer-phone">
-                                        <input type="text" id="edit-phone" name="phone" value="+79001231212" />
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-email">Email:</label>
-                                    </div>
-                                    <div class="modal-value" id="customer-email">
-                                        <input type="email" id="edit-email" name="email" value="ivan@example.com" />
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-address">Адрес доставки:</label>
-                                    </div>
-                                    <div class="modal-value" id="delivery-address">
-                                        <input type="text" id="edit-address" name="address" value="г. Москва, ул. Ленина, д. 10" />
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-date">Дата доставки:</label>
-                                    </div>
-                                    <div class="modal-value" id="delivery-date">
-                                        <input type="date" id="edit-date" name="date" value="2025-01-12" />
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-time">Временной интервал:</label>
-                                    </div>
-                                    <div class="modal-value" id="delivery-time">
-                                        <select id="edit-time" name="time">
-                                            <option value="morning" selected>Утро (9:00 - 12:00)</option>
-                                            <option value="afternoon">День (12:00 - 15:00)</option>
-                                            <option value="evening">Вечер (15:00 - 18:00)</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">
-                                        <label for="edit-items">Состав заказа:</label>
-                                    </div>
-                                    <div class="modal-value" id="order-items">
-                                        <input type="text" id="edit-items" name="items" value="Товар1, Товар2, Товар3" />
-                                    </div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">Стоимость:</div>
-                                    <div class="modal-value" id="order-price">₽3500</div>
-                                </div>
-
-                                <div class="modal-row">
-                                    <div class="modal-label">Комментарий:</div>
-                                    <div class="modal-value" id="order-comment">Позвонить перед доставкой</div>
-                                </div> 
-                            </form>
-                            <button type="submit">Сохранить</button>
-                            <button type="submit">Отмена</button>
-                        </div>
-                    </div>
                 </section>
-
             </section>
         </main>
         <footer class="footer">

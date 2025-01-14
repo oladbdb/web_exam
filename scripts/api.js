@@ -136,5 +136,26 @@ async function getOrderById(orderId) {
     return await response.json();
 }
 
+async function updateOrder(orderId, updatedFields) {
+    try {
+        const response = await fetch(`${API_URL}/orders/${orderId}?api_key=${API_KEY}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedFields)
+        });
+
+        if (!response.ok) {
+            throw new Error('Ошибка при обновлении заказа');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Ошибка:', error);
+        throw error;
+    }
+}
+
 
 
